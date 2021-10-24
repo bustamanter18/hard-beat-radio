@@ -1,32 +1,28 @@
-const express=require('express');
-const app=express();
-const port=process.env.PORT || 3000;
+const path = require('path');
+const express = require('express');
+const app = express();
 
-//motor de plantillas
-app.set('view engine','ejs');
-app.set('views',__dirname+'/vistas');
+const socket = require('socket.io');
 
-app.use(express.static(__dirname + '/public'))
+// settings
+app.set('port', process.env.PORT || 3000);
 
-app.get('/',(req,res)=>
-{
-  res.render('index',{titulo:'Mi título dinámico'})
-})
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/servicios',(req,res)=>
-{
-  res.render('servicios',{tituloServicios: "Este es un mensaje dinámico de servicios"})
-})
+// listen the server
+const server = app.listen(app.get('port'), () => {
+  console.log('Listening on port', app.get('port'));
+});
 
-app.listen(port,()=>
-{
-  console.log('Servidor a su servicio en el puerto: ',port)
-})
-app.use((req,res,next)=>
-{
-  res.status(404).render('404',
-  {
-    titulo: "404",
-    descripcion: "Título del sitio web"
-  })
-})
+const io = socket(server);
+io.on('connection', (socket) => {
+  console.log('socket connection opened:', socket.id);
+  
+  socket.on('chat:message', function(data) {
+    io.sockets.emit('chat:message', data);
+  });
+
+  socket.on('chat:typing', function(data) {
+    socket.broadcast.emit('chat:typing', data);
+  });
+});
