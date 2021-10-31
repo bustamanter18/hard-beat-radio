@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chat App</title>
+  <title>Chat Socket.io</title>
    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="chat-container">
-    <div id="chat-window">
+  <div id="chatContainer">
+    <div id="chatWindow">
       <div id="output"></div>
       <div id="actions"></div>
     </div>
     <!-- user and message -->
-    <input id="username" type="text" placeholder="username">
-    <input id="message" type="text" placeholder="message">
-    <button id="send">Send</button>
+    <form id="form">
+      <input id="username" type="text" placeholder="Inserta un nombre de usuario">
+      <input id="message" type="text" placeholder="Escribe tu mensaje">
+      <button id="send">Send</button>
+    </form>
   </div>
 
   <!--socket.io -->  
