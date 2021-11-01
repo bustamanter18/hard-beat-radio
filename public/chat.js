@@ -34,7 +34,6 @@ message.addEventListener('keypress', function () {
 socket.on('chat:message', function(data) {
   actions.innerHTML = '';
   output.innerHTML += `<p><strong>${data.username}</strong>: ${data.message}</p>`;
-  console.log('Este es el ultimo mensaje del output: '+output.lastChild.innerHTML);
   //Vamos al pixel establecido(x,y), en caso de que el valor establecido sea mayor que la altura o anchura va al último
   chatWindow.scrollTo( 0, 100000000 );
 });
