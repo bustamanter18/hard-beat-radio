@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chat App</title>
+  <title>Hard Beat Radio</title>
    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="estilos.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--https://freeuk17.listen2myradio.com/records/radiouser3134049/record.mp3>-->
 </head>
 <body>
-
+  <header>
+    <h1>HARD BEAT RADIO</h1>
+  </header>
+  <audio id="audio" controls height="300px" >
+    <source src="https://freeuk24.listen2myradio.com/live.mp3?typeportmount=s1_27317_stream_83450998"> 
+  </audio>
   <div id="chatContainer">
+    <h2>CHAT</h2>
     <div id="chatWindow">
       <div id="output"></div>
       <div id="actions"></div>
     </div>
     <!-- user and message -->
     <form id="form">
-      <input id="username" type="text" placeholder="username">
-      <input id="message" type="text" placeholder="message">
-      <button id="send">Send</button>
+      <input id="username" type="text" placeholder="Escribe tu nombre de usuario">
+      <input id="message" type="text" placeholder="Escribe tu mensaje">
+      <input type="submit" name="enviar" value="Enviar">
     </form>
   </div>
 
