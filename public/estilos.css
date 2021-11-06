@@ -26,6 +26,27 @@ header h1
 	background-color: darkblue;
 	border: 1px solid white;
 }
+/*--------------------------------------------NAV---------------------------------------*/
+ul
+{
+	list-style: none;
+}
+ul li
+{
+	float: left;
+	background-color: white;
+	color: black;
+	margin: 10px;
+	border-radius: 8px;
+}
+ul li a
+{
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin:0px;
+	padding:10px;
+}
 /*----------------------------------------REPRODUCTOR------------------------------------*/
 audio
 {
