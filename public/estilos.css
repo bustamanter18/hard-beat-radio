@@ -16,6 +16,19 @@ h2
 	text-align: center;
 }
 /*----------------------------------------HEADER----------------------------------------*/
+header
+{
+	display:flex;
+	flex-direction: row;
+	border: 1px solid white;
+}
+header img
+{
+	position: relative;
+	vertical-align: bottom;
+	bottom: -40px;
+	left: 90px;
+}
 header h1
 {
 	padding: 1%;
@@ -23,8 +36,9 @@ header h1
 	font-stretch: ultra-expanded;
 	font-size: 4em;
 	text-shadow: 3px 3px 3px black;
-	background-color: darkblue;
-	border: 1px solid white;
+}
+header h1
+{
 }
 /*--------------------------------------------NAV---------------------------------------*/
 ul
