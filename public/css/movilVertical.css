@@ -1,0 +1,39 @@
+#logo
+{
+	width:200px;
+	height:200px;
+}
+#menu
+{
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+#menu nav ul
+{
+	display: none;
+	flex-direction: column;
+}
+#hamburguesa
+{
+	display: block;
+}
+#hamburguesa a
+{
+	text-decoration: none;
+	color: white;
+	position: relative;
+	width: 100%;
+}
+#hamburguesa img
+{
+	vertical-align: text-top;
+	margin-right:5px;
+}
+#reproductor
+{
+	top:130px;
+}
+#reproductor img
+{
+	width: 50px;
+}

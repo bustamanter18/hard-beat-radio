@@ -1,0 +1,61 @@
+#logo
+{
+	max-width: 30%;
+	width:290px;
+	height: 290px;
+}
+#eslogan
+{
+	top: 80px;
+	width:70%;
+	justify-content: space-around;
+	font-size:30px;
+}
+#menu
+{
+	width:70%;
+	left: 30%;
+	justify-content: space-around;
+}
+#menu nav ul li a
+{
+	font-size: 20px;
+}
+
+#principal
+{
+	display: flex;
+	flex-direction: row;
+	padding-left: 10%;
+	height: 600px;
+
+}
+#chat
+{
+	position: relative;
+	top:100px;
+	height: 400px;
+	width: 40%;
+}
+#conversacion
+{
+	height: 1000px;
+}
+#reproductor
+{
+	width: 40%;
+	top:100px;
+	margin-left: 10%;
+	height: 200px;
+}
+#pantallaReproductor
+{
+	height: 50px;
+	/*Altura del texto para centrarlo verticalmente*/
+	line-height: 50px;
+	font-size: 20px;
+}
+#reproductor img
+{
+	width: 75px;
+}

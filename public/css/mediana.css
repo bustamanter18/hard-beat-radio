@@ -1,0 +1,32 @@
+#logo
+{
+	max-width: 30%;
+	width:300px;
+	height: 300px;
+}
+#eslogan
+{
+	width:100%;
+	justify-content: space-around;
+	font-size:20px;
+}
+#menu
+{
+	width: 100%;
+	justify-content: space-around;
+}
+/*------------------------------------PRINCIPAL--------------------------------------------*/
+#principal
+{
+	flex-direction: column;
+	height: 800px;
+}
+#chat
+{
+	top: 100px;
+	height: 400px;
+}
+#reproductor
+{
+	top: 200px;
+}

@@ -3,7 +3,6 @@ body
 	display: flex;
 	flex-direction: column;
 	background-color:black;
-	color:white;
 }
 div{display: flex;}
 section
@@ -153,7 +152,12 @@ input[type=submit]:hover {
   background-color:lightblue;
   color: black;
 }
-/*-----------------------------------------CHAT---------------------------------------------->*/
+/*---------------------------------------PRINCIPAL--------------------------------------------*/
+#principal
+{
+	
+}
+/*---------------------------CHAT--------------------------*/
 #chat
 {
 	border: 1px solid white;
@@ -205,6 +209,13 @@ input[type=submit]:hover {
 #comentar button:hover
 {
 	background-color:#666;
+}
+/*-------------------REPRODUTOR------------------*/
+#controles
+{
+	display: flex;
+	flex-direction: row;
+	background-color: darkgreen;
 }
 /*--------------------------------------------GRILLA---------------------------------------------------*/
 .grid

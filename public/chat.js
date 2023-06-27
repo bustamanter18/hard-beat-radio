@@ -1,8 +1,10 @@
 // conenction
+console.log('Estoy dentro de chat.js');
+//console.log(constante);
 let socket = io();
 
 // DOM elements
-let chatWindow= document.getElementById('chatWindow');
+let chatWindow= document.getElementById('formularioChat');
 let form = document.getElementById('form');
 let message = document.getElementById('message');
 let username = document.getElementById('username');

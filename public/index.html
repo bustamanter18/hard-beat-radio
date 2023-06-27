@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Hard Beat Radio</title>
-   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> 
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="estilos.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--https://freeuk17.listen2myradio.com/records/radiouser3134049/record.mp3>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HARD BEAT Radio</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"><!--Esta se aplica a todos-->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1201px)" href="css/grande.css"><!--Se aplica a todas las pantallas de 1200px o más-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="css/mediana.css"><!--Se aplica a pantallas de 1199px o menos-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 833px)" href="css/movilHorizontal.css"><!--Se aplica a pantallas de 833px o menos-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 500px)" href="css/movilVertical.css"><!--Se aplica a pantallas de 500px o menos-->
 </head>
 <body>
-  <header>
-    <img height="150px" src="img/H.svg">
-    <h1>ARD BEAT RADIO</h1>
-  </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="pistas.html" target="_blank">Pistas de audio</a></li>
-      </ul>
-    </nav>
-  <audio id="audio" controls height="300px" >
-    <source src="http://stream-54.zeno.fm/zjhaqs0te7juv?zs=hc0ACJXVQOioGSRDCfhUaw"> 
-  </audio>
-  <div id="chatContainer">
-    <h2>CHAT</h2>
-    <div id="chatWindow">
-      <div id="output"></div>
-      <div id="actions"></div>
-    </div>
-    <!-- user and message -->
-    <form id="form">
-      <input id="username" type="text" placeholder="Escribe tu nombre de usuario">
-      <input id="message" type="text" placeholder="Escribe tu mensaje">
-      <input type="submit" name="enviar" value="Enviar">
-    </form>
-  </div>
+    <div id="contenedor">
+        <div id="header">
+            <div id="logo"><img src="img/H.jpg"></div>
+            <div id="eslogan">Aquí iría un pequeño eslogan de la mano del señor riojanito</div>
+            <div id="menu">
+                <li id="hamburguesa" onclick="ocultar(this)"><a href="#" id="enlaceHamburguesa" class="active" ><img src="img/hamburguesa.png" width="20px"> HARD BEAT RADIO</a></li>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sesiones.html">Sesiones</a></li>
+                        <li><a href="tracks.html">Pistas libres</a></li>
+                        <li><a href="fiestas.html">Calendario</a></li>
+                        <li><a href="djs.html">Dj's y productores</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="principal">
+            <div id="chat">
+                <div class="cabecera"><h3>CHAT</h3></div>
+                <div id="contenedorChat">
+                    <div id="output">
+                        <p><strong>Miguel</strong>: Buenas tardes makinas.</p>
+                    </div>
+                    <div id="actions"></div>
+                </div>
+                <div id="formularioChat">
+                    <form id="form">
+                        <input type="text" name="usuario" id="username">
+                        <input type="text" name="mensaje" id="message">
+                        <input type="submit" name="enviar" value="enviar" id="send">
+                    </form>
+                </div>
+            </div>
 
-  <!--socket.io -->  
- <script src="/socket.io/socket.io.js"></script>
- <script src="/chat.js"></script>
+            <div id="reproductor">
+                <div id="pantallaReproductor">Artista de la pista - Título de la canción original</div>
+                <div id="controles">
+                    <div id="play"><img src="img/botones reproduccion/play.png"></div>
+                    <div id="pause"><img src="img/botones reproduccion/pause.png"></div>
+                    <div id="stop"><img src="img/botones reproduccion/stop.png"></div>
+                    <div id="mute"><img src="img/botones reproduccion/mute.png"></div>
+                    <div id="volumen"><img src="img/botones reproduccion/volumen.png"></div>
+                </div>
+            </div>
+        </div>
+        <div id="pie">
+            <footer>Desarrollado y diseñado por <a href="#">Gonzalo Bustamante</a></footer>
+        </div>
+    </div>
 </body>
 </html>
+<script type="text/javascript" src=scripts/collapse.js></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="chat.js"></script>

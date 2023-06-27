@@ -1,0 +1,25 @@
+#eslogan
+{
+	color:white;
+	width: 100%;
+	justify-content:start;
+}
+#menu
+{
+	width: 100%;
+	justify-content: start;
+}
+#menu nav ul
+{
+	display: flex;
+	flex-direction: row;
+	top: 100px;
+}
+#hamburguesa
+{
+	display: none;
+}
+#reproductor img
+{
+	width: 65px;
+}
