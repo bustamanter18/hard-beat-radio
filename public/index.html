@@ -49,10 +49,11 @@
             <div id="reproductor">
                 <div id="pantallaReproductor">Artista de la pista - Título de la canción original</div>
                 <div id="controles">
-                    <div id="play"><img src="img/botones reproduccion/play.png"></div>
-                    <div id="pause"><img src="img/botones reproduccion/pause.png"></div>
-                    <div id="stop"><img src="img/botones reproduccion/stop.png"></div>
-                    <div id="mute"><img src="img/botones reproduccion/mute.png"></div>
+                    <audio id="audio" src="http://stream.zeno.fm/zjhaqs0te7juv"></audio>
+                    <div id="play" onclick="document.getElementById('audio').play()"><img src="img/botones reproduccion/play.png"></div>
+                    <div id="pause" onclick="document.getElementById('audio').pause()"><img src="img/botones reproduccion/pause.png"></div>
+                    <div id="stop" onclick="document.getElementById('audio').stop()"><img src="img/botones reproduccion/stop.png"></div>
+                    <div id="mute" onclick="document.getElementById('audio').volume=0"><img src="img/botones reproduccion/mute.png"></div>
                     <div id="volumen"><img src="img/botones reproduccion/volumen.png"></div>
                 </div>
             </div>
@@ -66,3 +67,4 @@
 <script type="text/javascript" src=scripts/collapse.js></script>
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="chat.js"></script>
+<script type="text/javascript" src="scripts/audio.js"></script>

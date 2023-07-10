@@ -1,6 +1,3 @@
-// conenction
-console.log('Estoy dentro de chat.js');
-//console.log(constante);
 let socket = io();
 
 // DOM elements
